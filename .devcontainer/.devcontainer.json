@@ -1,0 +1,18 @@
+{
+	"postCreateCommand": "git submodule update --init && yarn setup && npm i grunt -g",
+	"build": {
+		"dockerfile": ".devcontainer/Dockerfile",
+		"args": {
+			"VARIANT": "16"
+		}
+	},
+	"features": {
+		"homebrew": "latest",
+		"golang": "latest",
+		"gradle": "latest"
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+	"remoteUser": "node"
+}
